@@ -21,10 +21,18 @@ property2.save()
 
 binding.pry
 
+#all_properties = Property.all()
+property1.bedrooms = 3
 
+binding.pry
 
-delete_all_properties = Property.delete_all
+Property.find_by_id()
 all_properties = Property.all()
+
+
+
+#delete_all_properties = Property.delete_all
+#all_properties = Property.all()
 
 binding.pry
 

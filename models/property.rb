@@ -92,9 +92,10 @@ sql = "SELECT * FROM properties WHERE id = $1"
 value = [@id]
 
 db.prepare("find_by_id", sql)
-db.exec_prepared("find_by_id", value)
+found_property = db.exec_prepared("find_by_id", value)
 db.close()
 
+return found_property
 
 end
 
@@ -109,6 +110,8 @@ def Property.find_by_address()
   db. exec_prepared("find_by_address", value)
 
   db.close()
+
+
 end
 
 
